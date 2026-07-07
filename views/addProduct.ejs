@@ -12,7 +12,6 @@
 
 <body class="bg-light">
 
-  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Supermarket App</a>
@@ -29,7 +28,6 @@
       </div>
     </nav>
 
-  <!-- Form -->
   <div class="container mt-5">
 
     <div class="row justify-content-center">
@@ -44,7 +42,7 @@
 
           <div class="card-body">
 
-            <form action="/addProduct" method="POST">
+            <form action="/addProduct" method="POST" enctype="multipart/form-data">
 
               <div class="mb-3">
                 <label for="name" class="form-label">
@@ -72,12 +70,11 @@
                   placeholder="Enter price" required>
               </div>
 
-              <div class="mb-4">
-                <label for="image" class="form-label">
-                  Image URL
+              <div class="mb-4 text-center">
+                <label for="image" class="form-label d-block">
+                  Image:
                 </label>
-
-                <input type="text" class="form-control" id="image" name="image" placeholder="Enter image URL" required>
+                <input type="file" id="image" name="image" accept="image/*">
               </div>
 
               <div class="d-grid gap-2">
